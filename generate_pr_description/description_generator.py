@@ -14,7 +14,7 @@ def generate_description(code_diff: str) -> str:
     client = boto3.client('bedrock-runtime')
     body = {
         "prompt": f"Human: Can you summarize the code diff below:{code_diff}\nAssistant:",
-        "max_tokens_to_sample": 300,
+        "max_tokens_to_sample": 500,
     }
     response = client.invoke_model(
         body=str.encode(json.dumps(body)),

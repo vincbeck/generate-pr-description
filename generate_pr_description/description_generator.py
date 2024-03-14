@@ -6,6 +6,11 @@ BEDROCK_MODEL_ID = "anthropic.claude-v2:1"
 
 
 def generate_description(code_diff: str):
+    """
+    Generate a description for a given code diff.
+    
+    :param code_diff: the code diff
+    """
     client = boto3.client('bedrock-runtime')
     body = {
         "prompt": f"Human: Can you summarize the code diff below:{code_diff}\nAssistant:",

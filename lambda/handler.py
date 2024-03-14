@@ -12,7 +12,6 @@ logger.setLevel(logging.INFO)
 def handler(event, context):
     logger.info('## ENVIRONMENT VARIABLES: %s', json.dumps(dict(**os.environ)))
     logger.info('## EVENT: %s', json.dumps(event))
-    logger.info('## CONTEXT: %s', json.dumps(context))
 
     if "url" not in event:
         return {"statusCode": 400, "body": "url is required"}

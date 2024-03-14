@@ -20,4 +20,5 @@ def generate_description(code_diff: str) -> str:
         body=str.encode(json.dumps(body)),
         modelId=BEDROCK_MODEL_ID
     )
-    return response['body'].read().decode('utf-8')
+    body_json = json.loads(response['body'].read().decode('utf-8'))
+    return body_json["completion"]

@@ -14,11 +14,11 @@ def handler(event, context):
     logger.info('## EVENT: %s', json.dumps(event))
 
     if "url" not in event:
-        return {"statusCode": 400, "body": "url is required"}
+        raise ValueError("'url' is required")
 
     code_diff = pull_code_diff(event["url"])
     logger.info("Generating description for PR %s ...", event["url"])
     description = generate_description(code_diff)
     logger.info("Description: %s", description)
 
-    return {"statusCode": 200, "body": "description"}
+    return description

@@ -9,7 +9,7 @@ def pull_code_diff(url: str) -> str:
             f"The URL specified {url!r} is not valid. The URL must be a Github pull request or a Github compare page.")
 
     match_pr_page = re.match(r"(https://github\.com/.+/pull/[0-9]+).*", url, re.IGNORECASE)
-    match_compare_page = re.match(r"(https://github\.com/.+/compare/[^/]+).*", url, re.IGNORECASE)
+    match_compare_page = re.match(r"(https://github\.com/.+/compare/[^?]+).*", url, re.IGNORECASE)
 
     if match_pr_page:
         url = match_pr_page.group(1)

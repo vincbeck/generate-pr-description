@@ -11,6 +11,7 @@ This script uses the model `anthropic.claude-v2:1` so you need to have access to
 ## Getting started
 - Download the code: `git clone git@github.com:vincbeck/generate-pr-description.git`
 - Create virtual environment: `pyenv virtualenv 3.10 generate-pr-description`
+- Activate the environment: `pyenv activate generate-pr-description`
 - Install all dependencies: `pip install -r requirements.txt`
 - Run the script:
   - Generate a description for an existing PR: `./generate-pr-description.py https://github.com/<respository>/pull/<pr_number>`.

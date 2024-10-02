@@ -6,7 +6,7 @@ Generate a PR description for you.
 
 It uses [Amazon Bedrock](https://aws.amazon.com/bedrock/) to generate the description.
 You must have an AWS account and have permissions to invoke models in Amazon Bedrock.
-This script uses the model `anthropic.claude-v2:1` so you need to have access to this model in your account.
+This script uses the model `anthropic.claude-3-sonnet-20240229-v1:0` so you need to have access to this model in your account.
 
 ## Getting started
 - Download the code: `git clone git@github.com:vincbeck/generate-pr-description.git`
